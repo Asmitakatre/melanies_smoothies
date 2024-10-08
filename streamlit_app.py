@@ -1,6 +1,5 @@
 # Import python packages
 import streamlit as st
-import json
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
@@ -45,6 +44,6 @@ if time_to_insert:
         st.success('Your Smoothie is ordered!', icon="👍")
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+        st.text(fruityvice_response.json())
 #fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
